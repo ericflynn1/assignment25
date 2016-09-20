@@ -1,0 +1,18 @@
+<!doctype html>
+
+<head>
+    <title> Book Repository</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <section ng-controller="bookController">
+        <h1>Book Repository</h1>
+        <input type="text" ng-model="checkout" placeholder="Book">
+        <button ng-click="bookCheckout()">Checkout Book</button>
+    </section>
+    <section ng-controller="userSearchController">
+        <input type="text" ng-model="userSearch" placeholder="username">
+        <button ng-click="search()">Search for User</button>
+        <h3>User:</h3>
