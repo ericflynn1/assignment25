@@ -6,13 +6,28 @@
     <script src="app.js"></script>
 </head>
 
-<body>
+<body ng-app="BookRepositoryApp">
+
     <section ng-controller="bookController">
         <h1>Book Repository</h1>
-        <input type="text" ng-model="checkout" placeholder="Book">
-        <button ng-click="bookCheckout()">Checkout Book</button>
+        <input type="text" ng-model="$scope.user" placeholder="Name">
+        <h3>{{ titles }}</h3>
+        <ul>
+            <li ng-repeat="book in books">{{ book.title }}
+
+            <button ng-click="reserve()">Borrow This Title</button>
+            </li>
     </section>
-    <section ng-controller="userSearchController">
+
+    <section ng-controller="userSearch">
+        <label for="person"></label>
         <input type="text" ng-model="userSearch" placeholder="username">
         <button ng-click="search()">Search for User</button>
         <h3>User:</h3>
+        <ul>
+            <li ng-repeat="element in books">{{ element.title }}</li>
+        </ul>
+    </section>
+    </body>
+    </html>
+        
